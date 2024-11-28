@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use app\Http\Controllers\viewcontroller;
+use App\Http\Controllers\viewdemocontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,3 +53,13 @@ Route::get('/account-show',[AccountController::class,'showData'])
 Route::get('/account-list',[AccountController::class,'list'])#->name('account.list')
 ;
 Route::get('/account-getAll',[AccountController::class,'getAllAccount']);
+#view name
+route::get('/helloo',function(){
+    return view('congtung',['name'=>'bokachangaoshiette']);
+});
+# view thu muc con
+route::get('/bokacon',function(){
+    return view('bokacon.adminct',['name'=>'Boka Con Ne Ke']);
+});
+#view 4
+route::get('/bokacha',[viewdemocontroller::class,'ctview4']);
