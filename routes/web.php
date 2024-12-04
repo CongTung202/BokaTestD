@@ -63,3 +63,9 @@ route::get('/bokacon',function(){
 });
 #view 4
 route::get('/bokacha',[viewdemocontroller::class,'ctview4']);
+#view5
+route::get("/view5",[viewdemocontroller::class,'ctview5']);
+#view 6
+route::get('/view6',function(){
+    return view('bokacon.view6');
+});
