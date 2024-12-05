@@ -69,3 +69,22 @@ route::get("/view5",[viewdemocontroller::class,'ctview5']);
 route::get('/view6',function(){
     return view('bokacon.view6');
 });
+#view1
+route::get('/view1',function(){
+    return view('view1',['name'=>'Boka Chan']);
+});
+#view2
+route::get('/view2',function(){
+    return view('view2',['name'=>'BokaChan Ei',
+    'arr'=>[1,5,2,3,0,9],]);
+});
+#view3
+route::get('/view3',function(){
+    return view('view3',['name'=>['CongTung','BokaChan','RaidenEI','BoCon'],
+                                        'arr'=>[2,4,6,3,1,5],
+                                    'users'=>[],]);
+});
+#test
+route::get('/test',function(){
+    return view('test1header');
+});

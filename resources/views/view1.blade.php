@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <x-header name="Boka-Chan"/>
+    <h1>Tao View Simple</h1>
+    <br>
+    <h2>Gioi Thieu View Bang Blade ,{{$name}}</h2>
 </body>
 </html>
