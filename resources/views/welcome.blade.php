@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <x-header name="Boka-Chan"/>
+    <x-header name="Boka-Chan" :animal="$animal"/>
 </body>
 </html>

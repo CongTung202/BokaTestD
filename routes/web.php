@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ProductController;
 use app\Http\Controllers\viewcontroller;
 use App\Http\Controllers\viewdemocontroller;
 use Illuminate\Support\Facades\Route;
@@ -16,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+route::get('/',[ProductController::class,'index']);
 #        tao trang web dau
 Route::get("/hello",function() {
     return "<h1 style='color:hotpink;'>Helicopter</h1>";
@@ -88,3 +90,13 @@ route::get('/view3',function(){
 route::get('/test',function(){
     return view('test1header');
 });
+#Template Blade Layout
+Route::get('/home',function(){
+    return view('index');
+    });
+    Route::get('/about-us',function(){
+    return view('about');
+    });
+    Route::get('/contact',function(){
+    return view('contact');
+    });

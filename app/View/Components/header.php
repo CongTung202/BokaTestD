@@ -6,14 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class header extends Component
+class Header extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $name;
+    public $animal;
+    public function __construct($name,$animal)
     {
         //
+        $this->name =$name;
+        $this ->animal =$animal;
     }
 
     /**
