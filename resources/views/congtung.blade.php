@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA Compatible" content="ie-edge">
-    <title>Cong Tung Het Cuu</title>
+   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <title>Cong Tung</title>
 </head>
 <body>
-    <h1>Welcome To Boka Route</h1>
+    <p class="h1">h1. Bootstrap heading</p>
     <h2>{{$name}}</h2>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

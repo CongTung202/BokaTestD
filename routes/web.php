@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use app\Http\Controllers\viewcontroller;
 use App\Http\Controllers\viewdemocontroller;
@@ -100,3 +101,5 @@ Route::get('/home',function(){
     Route::get('/contact',function(){
     return view('contact');
     });
+route::get('/login',[LoginController::class,'index'])->name('login.submit');
+route::post('/login',[LoginController::class,'LoginSubmit']);
