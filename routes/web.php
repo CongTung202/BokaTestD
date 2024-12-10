@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CTAcountController;
+use App\Http\Controllers\ctKhoaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\sessioncontroller;
 use app\Http\Controllers\viewcontroller;
 use App\Http\Controllers\viewdemocontroller;
 use Illuminate\Support\Facades\Route;
@@ -103,3 +106,13 @@ Route::get('/home',function(){
     });
 route::get('/login',[LoginController::class,'index'])->name('login.submit');
 route::post('/login',[LoginController::class,'LoginSubmit']);
+# session
+route::get('/congtung/get',[sessioncontroller::class,'ctSessionData']);
+route::get('/congtung/set',[sessioncontroller::class,'ctStoreSessionData']);
+route::get('/congtung/del',[sessioncontroller::class,'ctDeleteSessionData']);
+
+route::get('/ctlogin',[CTAcountController::class,'ctLogin'])->name('ctlogin');
+route::post('/ctlogin',[CTAcountController::class,'ctLoginSubmit'])->name('login.submit');
+route::get('/ctlogout',[CTAcountController::class,'ctlogout'])->name('logout.submit');
+#lesson07
+route::get('/khoas',[ctKhoaController::class,'ctGetAll'])->name('ctkhoaview');
