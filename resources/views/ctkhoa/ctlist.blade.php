@@ -9,7 +9,9 @@
     <title>CT-DSKhoa</title>
 </head>
 <body>
+    <a href="/khoas/ctadd" class="btn btn-primary sm-3">Them Moi</a>
     <section class="container border my-3">
+        
         <h1>Danh Sach Khoa</h1>
         <table class="table table-bordered">
             <thead>
@@ -33,7 +35,11 @@
                     <td>{{$item->CTMAKHOA}}</td>
                     <TD>{{$item->CTTENKHOA}}</TD>
                     <td>
-                        Edit/Delete
+                        <a href="/khoas/detail/{{$item->CTMAKHOA}}" class="btn btn-success">
+                            Chi tiết</a>
+                            <a href="/khoas/edit/{{$item->CTMAKHOA}}" class="btn btn-primary">
+                            Sửa</a>
+                            <a href="{{ route('congtung.delete', $item->CTMAKHOA) }}" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Xóa</a>
                     </td>
                 </tr>
             @endforeach

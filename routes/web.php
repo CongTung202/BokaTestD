@@ -116,3 +116,10 @@ route::post('/ctlogin',[CTAcountController::class,'ctLoginSubmit'])->name('login
 route::get('/ctlogout',[CTAcountController::class,'ctlogout'])->name('logout.submit');
 #lesson07
 route::get('/khoas',[ctKhoaController::class,'ctGetAll'])->name('ctkhoaview');
+Route::get('/khoas/detail/{makhoa}',[ctKhoaController::class,'ctGetKhoa']);
+Route::get('/khoas/edit/{makhoa}',[ctKhoaController::class,'ctEdit'])->name('congtung.update');
+route::post('/khoas/edit/{makhoa}',[ctKhoaController::class,'ctEditSubmit']);
+Route::get('/khoas/del/{makhoa}',[ctKhoaController::class,'ctDeleteSubmit'])->name('congtung.delete');
+Route::get('/khoas/ctadd',[ctKhoaController::class,'ctInsert'])->name('congtung.create');
+Route::post('/khoas/ctadd',[ctKhoaController::class,'ctCreateSubmit'])->name('ct.CreateSubmit');
+
